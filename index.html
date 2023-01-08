@@ -66,38 +66,38 @@
   </body>
 </html>
 <script>
-  // Obtener elementos del DOM
+  // Obtenemos elementos del DOM
   const countdownEl = document.getElementById('countdown');
   const formEl = document.getElementById('form');
   const birthdayInputEl = document.getElementById('birthday');
 
   // Función para crear un globo
   function createBalloon() {
-    // Crear un elemento div
+    // Creamos un elemento div
     const balloonEl = document.createElement('div');
 
-    // Asignarle la clase "balloon"
+    // Asignamos la clase "balloon"
     balloonEl.classList.add('balloon');
 
-    // Generar una posición aleatoria en la pantalla
+    // Generamos una posición aleatoria en la pantalla
     const x = Math.floor(Math.random() * window.innerWidth);
     const y = Math.floor(Math.random() * window.innerHeight);
     balloonEl.style.left = `${x}px`;
     balloonEl.style.top = `${y}px`;
 
-    // Añadir el globo al body
+    // Añadimo el globo al body
     document.body.appendChild(balloonEl);
   }
 
   // Función para crear confeti
   function createConfetti() {
-    // Crear un elemento div
+    // Creamos un elemento div
     const confettiEl = document.createElement('div');
 
-    // Asignarle la clase "confetti"
+    // Asignamos la clase "confetti"
     confettiEl.classList.add('confetti');
 
-    // Generar una posición aleatoria en la pantalla
+    // Generamos una posición aleatoria en la pantalla
     const x = Math.floor(Math.random() * window.innerWidth);
     confettiEl.style.left = `${x}px`;
 
@@ -107,10 +107,10 @@
 
   // Función para iniciar la fiesta
   function startParty() {
-    // Crear globos cada segundo
+    // Creamos globos cada segundo
     setInterval(createBalloon, 1000);
 
-    // Crear confeti cada 100 milisegundos
+    // Creamos confeti cada 100 milisegundos
     setInterval(createConfetti, 100);
   }
 
